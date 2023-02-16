@@ -13,7 +13,7 @@ socket = WebSocket(coin)
 t1 = threading.Thread(target=socket.websocket_run, daemon=True)
 
 def f():
-  threading.Timer(30.0, f).start()
+  threading.Timer(60.0, f).start()
   if socket.connected:
       # os.system('cls||clear')
       if not coin.work_active:
